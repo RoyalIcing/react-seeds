@@ -47,10 +47,8 @@
 
 ### border
 
-- **borderRadius**
-- **borderWidth**
-- **borderStyle**
-- **borderColor**
+- **borderRadius / cornerRadius** : number
+- **border** : { width: number, style: string, color: color }
 
 
 [build-badge]: https://img.shields.io/travis/BurntCaramel/react-seeds/master.svg?style=flat-square
