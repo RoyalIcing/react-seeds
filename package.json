@@ -1,0 +1,29 @@
+{
+  "name": "react-seeds",
+  "version": "0.1.0",
+  "description": "Preset stylers for flexbox and common CSS",
+  "main": "lib/index.js",
+  "jsnext:main": "es6/index.js",
+  "files": [
+    "es6",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build",
+    "clean": "nwb clean",
+    "test": "nwb test",
+    "test:watch": "nwb test --server"
+  },
+  "dependencies": {
+    "react-sow": "^0.3.0-b3"
+  },
+  "devDependencies": {
+    "lodash": "^4.13.1",
+    "nwb": "0.11.x"
+  },
+  "author": "",
+  "homepage": "",
+  "license": "MIT",
+  "repository": ""
+}
