@@ -75,31 +75,45 @@ describe('Stylers', () => {
 		expectClean(flex({
 			row: true
 		}).style).toEqual({
-			flex: true,
-			flexDirection: 'row'
+			display: 'flex',
+			flexDirection: 'row',
+			flexWrap: 'nowrap'
 		})
 
 		expectClean(flex({
 			row: true,
 			reverse: true
 		}).style).toEqual({
-			flex: true,
-			flexDirection: 'row-reverse'
+			display: 'flex',
+			flexDirection: 'row-reverse',
+			flexWrap: 'nowrap'
 		})
 
 		expectClean(flex({
 			column: true
 		}).style).toEqual({
-			flex: true,
-			flexDirection: 'column'
+			display: 'flex',
+			flexDirection: 'column',
+			flexWrap: 'nowrap'
 		})
 
 		expectClean(flex({
 			column: true,
 			reverse: true
 		}).style).toEqual({
-			flex: true,
-			flexDirection: 'column-reverse'
+			display: 'flex',
+			flexDirection: 'column-reverse',
+			flexWrap: 'nowrap'
+		})
+
+		expectClean(flex({
+			column: true,
+			reverse: true,
+			wrap: true
+		}).style).toEqual({
+			display: 'flex',
+			flexDirection: 'column-reverse',
+			flexWrap: 'wrap'
 		})
   })
 })
