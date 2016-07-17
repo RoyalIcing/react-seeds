@@ -10,15 +10,15 @@
 
 - **boxSizing** = 'border-box'
 - **overflow**
-- **width**
-- **height**
-- **minWidth**
-- **minHeight**
+- **width** : number
+- **height** : number
+- **minWidth** : number
+- **minHeight** : number
 
 ### visibility
 
 - **visibility**
-- **opacity**
+- **opacity** : number
 
 ### flex
 
@@ -28,22 +28,22 @@
 - **reverse** = false
 - **alignItems**
 - **basis**
-- **grow**
-- **shrink**
+- **grow** : number
+- **shrink** : number
 
 ### position
 
-- **absolute** = false
-- **relative** = false
-- **zIndex**
+- **absolute** : { top: number?, bottom: number?, left: number?, right: number? }
+- **relative** : { top: number?, bottom: number?, left: number?, right: number? }
+- **zIndex** : number
 
 ### margin
 
-- **margin** : number | { top: number?, bottom: number?, left: number, right: number? }
+- **margin** : number | { top: number?, bottom: number?, left: number?, right: number? }
 
 ### padding
 
-- **padding** : number | { top: number?, bottom: number?, left: number, right: number? }
+- **padding** : number | { top: number?, bottom: number?, left: number?, right: number? }
 
 ### border
 
