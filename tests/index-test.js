@@ -69,7 +69,7 @@ describe('Stylers', () => {
 		})
   })
 
-	it('flex', () => {
+	it('flex container', () => {
     expectClean(flex({}).style).toEqual({})
 
 		expectClean(flex({
@@ -114,6 +114,58 @@ describe('Stylers', () => {
 			display: 'flex',
 			flexDirection: 'column-reverse',
 			flexWrap: 'wrap'
+		})
+  })
+
+	it('flex item', () => {
+    expectClean(flex({}).style).toEqual({})
+
+		expectClean(flex({
+			alignItems: 'center',
+			basis: '50%',
+			grow: 2,
+			shrink: 3
+		}).style).toEqual({
+			alignItems: 'center',
+			flexBasis: '50%',
+			flexGrow: 2,
+			flexShrink: 3
+		})
+  })
+
+	it('position', () => {
+    expectClean(position({}).style).toEqual({})
+
+		expectClean(position({
+			absolute: true
+		}).style).toEqual({
+			position: 'absolute'
+		})
+
+		expectClean(position({
+			absolute: { top: 10, bottom: 20, left: 30, right: 40 }
+		}).style).toEqual({
+			position: 'absolute',
+			top: 10,
+			bottom: 20,
+			left: 30,
+			right: 40
+		})
+
+		expectClean(position({
+			relative: true
+		}).style).toEqual({
+			position: 'relative'
+		})
+
+		expectClean(position({
+			relative: { top: 10, bottom: 20, left: 30, right: 40 }
+		}).style).toEqual({
+			position: 'relative',
+			top: 10,
+			bottom: 20,
+			left: 30,
+			right: 40
 		})
   })
 })
