@@ -168,4 +168,28 @@ describe('Stylers', () => {
 			right: 40
 		})
   })
+
+	it('border', () => {
+    expectClean(border({}).style).toEqual({})
+
+		expectClean(border({
+			borderRadius: 5.0
+		}).style).toEqual({
+			borderRadius: 5.0
+		})
+
+		expectClean(border({
+			cornerRadius: 20.0
+		}).style).toEqual({
+			borderRadius: 20.0
+		})
+
+		expectClean(border({
+			border: { width: 4, style: 'solid', color: 'white' }
+		}).style).toEqual({
+			borderWidth: 4,
+			borderStyle: 'solid',
+			borderColor: 'white'
+		})
+  })
 })

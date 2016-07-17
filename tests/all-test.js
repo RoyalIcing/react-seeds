@@ -26,7 +26,9 @@ describe('All styler', () => {
 			basis: '50%',
 			grow: 2,
 			shrink: 3,
-			absolute: { top: 10, bottom: 20, left: 30, right: 40 }
+			absolute: { top: 10, bottom: 20, left: 30, right: 40 },
+			cornerRadius: 20.0,
+			border: { width: 4, style: 'solid', color: 'white' }
 		}).style).toEqual({
 			boxSizing: 'content-box',
 			width: 500,
@@ -54,7 +56,11 @@ describe('All styler', () => {
 			top: 10,
 			bottom: 20,
 			left: 30,
-			right: 40
+			right: 40,
+			borderRadius: 20.0,
+			borderWidth: 4,
+			borderStyle: 'solid',
+			borderColor: 'white'
 		})
   })
 })
