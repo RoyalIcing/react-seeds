@@ -6,3 +6,5 @@ export { default as margin } from './margin'
 export { default as padding } from './padding'
 export { default as border } from './border'
 export { default as transition } from './transition'
+
+export { default as Seed } from './Seed'
