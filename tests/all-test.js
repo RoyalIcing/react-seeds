@@ -28,6 +28,7 @@ describe('All styler', () => {
 			shrink: 3,
 			absolute: { top: 10, bottom: 20, left: 30, right: 40 },
 			cornerRadius: 20.0,
+			text: { color: 'red' },
 			border: { width: 4, style: 'solid', color: 'white' }
 		}).style).toEqual({
 			boxSizing: 'content-box',
@@ -57,6 +58,7 @@ describe('All styler', () => {
 			bottom: 20,
 			left: 30,
 			right: 40,
+			color: 'red',
 			borderRadius: 20.0,
 			borderWidth: 4,
 			borderStyle: 'solid',

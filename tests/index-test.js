@@ -8,6 +8,8 @@ import {
 	position,
 	margin,
 	padding,
+	text,
+	background,
 	border,
 	transition
 } from 'src/index'
@@ -16,6 +18,12 @@ describe('Stylers', () => {
   it('boxSizing', () => {
     expectClean(boxSizing({}).style).toEqual({
 			boxSizing: 'border-box'
+		})
+
+		expectClean(boxSizing({
+			boxSizing: 'content-box'
+		}).style).toEqual({
+			boxSizing: 'content-box'
 		})
   })
 
@@ -166,6 +174,74 @@ describe('Stylers', () => {
 			bottom: 20,
 			left: 30,
 			right: 40
+		})
+  })
+
+	it('text', () => {
+    expectClean(text({}).style).toEqual({})
+
+		expectClean(text({
+			text: {
+				color: 'red',
+				align: 'right',
+				indent: '1em',
+				overflow: 'ellipsis',
+				transform: 'uppercase',
+				decoration: 'underline',
+				shadow: '1px 1px 2px black',
+				rendering: 'optimizeLegibility'
+			}
+		}).style).toEqual({
+			color: 'red',
+			textAlign: 'right',
+			textIndent: '1em',
+			textOverflow: 'ellipsis',
+			textTransform: 'uppercase',
+			textDecoration: 'underline',
+			textShadow: '1px 1px 2px black',
+			textRendering: 'optimizeLegibility'
+		})
+  })
+
+	it('background', () => {
+    expectClean(background({}).style).toEqual({})
+
+		expectClean(background({
+			background: {
+				color: 'yellow',
+				image: 'url("hello.png")',
+				position: 'left bottom',
+				size: '50% auto',
+				origin: 'border-box',
+				clip: 'text',
+				repeat: 'repeat-x',
+				attachment: 'fixed'
+			}
+		}).style).toEqual({
+			backgroundColor: 'yellow',
+			backgroundImage: 'url("hello.png")',
+			backgroundPosition: 'left bottom',
+			backgroundSize: '50% auto',
+			backgroundOrigin: 'border-box',
+			backgroundClip: 'text',
+			backgroundRepeat: 'repeat-x',
+			backgroundAttachment: 'fixed'
+		})
+
+		expectClean(background({
+			background: {
+				repeat: true
+			}
+		}).style).toEqual({
+			backgroundRepeat: 'repeat'
+		})
+
+		expectClean(background({
+			background: {
+				repeat: false
+			}
+		}).style).toEqual({
+			backgroundRepeat: 'no-repeat'
 		})
   })
 
