@@ -4,51 +4,162 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-## Stylers
+```
+npm i react-seeds --save
+```
+
+## Usage
+
+You can use *react-seeds* in two ways:
+- `import styler from 'react-seeds'` · You can call this props helper, which you `...` splat into your HTML-based component when rendering. 
+- `import { Seed } from 'react-seeds'` · Or you can use the `<Seed>` component and pass each style attribute as a prop.
+By default it renders a `<div>`, but you can change this using the `Component` prop.  
+
+There are examples of both below:
+
+### Reusable stylers
+
+```javascript
+import React from 'react'
+import styler from 'react-seeds'
+
+const baseStyler = ({ dark }) => styler({
+  row: true,
+  padding: '1em',
+  relative: {
+    top: '1em',
+    left: '1em'
+  },
+  text: {
+    color: dark ? '#eee' : '#111'
+  },
+  background: {
+    color: dark ? '#222' : '#eee'
+  }
+})
+
+export function Card({ children, dark = false }) {
+  return (
+    <div { ...baseStyler({ dark }) }>
+      { children }
+    </div>
+  )
+}
+```
+
+### React component styling with props
+
+```javascript
+import React from 'react'
+import { Seed } from 'react-seeds'
+
+export function TwoColumn({ content1, content2 }) {
+  return (
+    <Seed row Component='section'>
+      <Seed minWidth={ 200 } grow={ 1 }>
+        { content1 }
+      </Seed>
+      <Seed minWidth={ 400 } grow={ 1 }>
+        { content2 }
+      </Seed>
+    </Seed>
+  )
+}
+```
+
+## Styler attributes
+
+Styler attributes mostly match CSS’s attribute names, but have some opinionated changes for a nicer experience. 
+This includes nicer flexbox support by removing flex- prefixes,
+`border-box` box sizing by default,
+and use of objects for attributes such as margin, padding, absolute & relative positioning, text, background, and border.
 
 ### boxSizing
 
-- **boxSizing** = 'border-box'
-- **overflow**
-- **width** : number
-- **height** : number
-- **minWidth** : number
-- **minHeight** : number
+- **boxSizing** : *string* = 'border-box'
+- **overflow** : *string*
+- **width** : *number*
+- **height** : *number*
+- **minWidth** : *number*
+- **minHeight** : *number*
 
 ### visibility
 
-- **visibility**
-- **opacity** : number
+- **visibility** : *string*
+- **opacity** : *number*
 
 ### flex
 
-- **row** = false
-- **column** = false
-- **wrap** = false
-- **reverse** = false
-- **alignItems**
-- **basis**
-- **grow** : number
-- **shrink** : number
+- **row** : *boolean* = false
+- **column** : *boolean* = false
+- **wrap** : *boolean* = false
+- **reverse** : *boolean* = false
+- **alignItems** : *string*
+- **basis** : *string*
+- **grow** : *number*
+- **shrink** : *number*
 
 ### position
 
-- **absolute** : { top: number?, bottom: number?, left: number?, right: number? }
-- **relative** : { top: number?, bottom: number?, left: number?, right: number? }
-- **zIndex** : number
+- **absolute** : 
+  - **top** : *number?*
+  - **bottom** : *number?*
+  - **left** : *number?*
+  - **right** : *number?*
+- **relative**
+  - **top** : *number?*
+  - **bottom** : *number?*
+  - **left** : *number?*
+  - **right** : *number?*
+- **zIndex** : *number*
 
 ### margin
 
-- **margin** : number | { top: number?, bottom: number?, left: number?, right: number? }
+- **margin** : *number | object:*
+  - **top** : *number?*
+  - **bottom** : *number?*
+  - **left** : *number?*
+  - **right** : *number?*
 
 ### padding
 
-- **padding** : number | { top: number?, bottom: number?, left: number?, right: number? }
+- **padding** : *number | object:*
+  - **top** : *number?*
+  - **bottom** : *number?*
+  - **left** : *number?*
+  - **right** : *number?*
+
+### text
+
+- **text**
+  - **color** : *string*
+  - **align** : *string*
+  - **indent** : *string*
+  - **overflow** : *string*
+  - **transform** : *string*
+  - **decoration** : *string*
+  - **shadow** : *string*
+  - **rendering** : *string*
+
+### background
+
+- **background**
+  - **color** : *string*
+  - **image** : *string*
+  - **position** : *string*
+  - **size** : *string*
+  - **origin** : *string*
+  - **clip** : *string*
+  - **repeat** : *boolean | string*
+  - **attachment** : *string*
 
 ### border
 
-- **borderRadius / cornerRadius** : number
-- **border** : { width: number, style: string, color: color }
+- **borderRadius / cornerRadius** : *number*
+- **border**
+  - **width** : *number*
+  - **style** : *string*
+  - **color** : *color*
 
 
 [build-badge]: https://img.shields.io/travis/BurntCaramel/react-seeds/master.svg?style=flat-square
