@@ -1,7 +1,7 @@
 {
   "name": "react-seeds",
-  "version": "0.2.0",
-  "description": "Stylers for flexbox and common CSS",
+  "version": "0.3.0",
+  "description": "React stylers for nicer Flexbox and CSS",
   "main": "lib/index.js",
   "jsnext:main": "es6/index.js",
   "files": [
