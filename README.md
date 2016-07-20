@@ -132,34 +132,34 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 ### text
 
 - **text** : *object*
-  - **color** : *string*
-  - **align** : *string*
-  - **indent** : *string*
-  - **overflow** : *string*
-  - **transform** : *string*
-  - **decoration** : *string*
-  - **shadow** : *string*
-  - **rendering** : *string*
+  - **color** : *string?*
+  - **align** : *string?*
+  - **indent** : *string?*
+  - **overflow** : *string?*
+  - **transform** : *string?*
+  - **decoration** : *string?*
+  - **shadow** : *string?*
+  - **rendering** : *string?*
 
 ### background
 
 - **background** : *object*
-  - **color** : *string*
-  - **image** : *string*
-  - **position** : *string*
-  - **size** : *string*
-  - **origin** : *string*
-  - **clip** : *string*
-  - **repeat** : *boolean | string*
-  - **attachment** : *string*
+  - **color** : *string?*
+  - **image** : *string?*
+  - **position** : *string?*
+  - **size** : *string?*
+  - **origin** : *string?*
+  - **clip** : *string?*
+  - **repeat** : *boolean? | string?*
+  - **attachment** : *string?*
 
 ### border
 
 - **borderRadius / cornerRadius** : *number*
 - **border** : *object*
-  - **width** : *number*
-  - **style** : *string*
-  - **color** : *color*
+  - **width** : *number?*
+  - **style** : *string?*
+  - **color** : *color?*
 
 
 [build-badge]: https://img.shields.io/travis/BurntCaramel/react-seeds/master.svg?style=flat-square
