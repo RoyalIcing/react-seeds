@@ -101,12 +101,12 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 
 ### position
 
-- **absolute** : 
+- **absolute** : *object*
   - **top** : *number?*
   - **bottom** : *number?*
   - **left** : *number?*
   - **right** : *number?*
-- **relative**
+- **relative** : *object*
   - **top** : *number?*
   - **bottom** : *number?*
   - **left** : *number?*
@@ -115,7 +115,7 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 
 ### margin
 
-- **margin** : *number | object:*
+- **margin** : *number | object*
   - **top** : *number?*
   - **bottom** : *number?*
   - **left** : *number?*
@@ -123,7 +123,7 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 
 ### padding
 
-- **padding** : *number | object:*
+- **padding** : *number | object*
   - **top** : *number?*
   - **bottom** : *number?*
   - **left** : *number?*
@@ -131,7 +131,7 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 
 ### text
 
-- **text**
+- **text** : *object*
   - **color** : *string*
   - **align** : *string*
   - **indent** : *string*
@@ -143,7 +143,7 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 
 ### background
 
-- **background**
+- **background** : *object*
   - **color** : *string*
   - **image** : *string*
   - **position** : *string*
@@ -156,7 +156,7 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 ### border
 
 - **borderRadius / cornerRadius** : *number*
-- **border**
+- **border** : *object*
   - **width** : *number*
   - **style** : *string*
   - **color** : *color*
