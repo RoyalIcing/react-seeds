@@ -13,7 +13,7 @@ export default sow(({
 	(row || column) && {
 		display: 'flex',
 		flexDirection: column ? (reverse ? 'column-reverse' : 'column') : (reverse ? 'row-reverse' : 'row'),
-		flexWrap: wrap ? 'wrap' : 'nowrap'
+		flexWrap: (typeof wrap === 'string') ? wrap : (wrap ? 'wrap' : 'nowrap')
 	},
 	alignItems && { alignItems },
 	basis != null && { flexBasis: basis },

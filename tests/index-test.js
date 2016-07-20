@@ -123,6 +123,33 @@ describe('Stylers', () => {
 			flexDirection: 'column-reverse',
 			flexWrap: 'wrap'
 		})
+
+		expectClean(flex({
+			row: true,
+			wrap: true
+		}).style).toEqual({
+			display: 'flex',
+			flexDirection: 'row',
+			flexWrap: 'wrap'
+		})
+
+		expectClean(flex({
+			row: true,
+			wrap: false
+		}).style).toEqual({
+			display: 'flex',
+			flexDirection: 'row',
+			flexWrap: 'nowrap'
+		})
+
+		expectClean(flex({
+			row: true,
+			wrap: 'wrap-reverse'
+		}).style).toEqual({
+			display: 'flex',
+			flexDirection: 'row',
+			flexWrap: 'wrap-reverse'
+		})
   })
 
 	it('flex item', () => {
