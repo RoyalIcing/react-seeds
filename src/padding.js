@@ -6,7 +6,7 @@ export default sow(({
 	(padding == null) ? (
 		{}
 	) :
-	(typeof padding === 'number') ? (
+	(typeof padding === 'number' || typeof padding === 'string') ? (
 		{ padding }
 	) : (
 		Object.assign({}, 

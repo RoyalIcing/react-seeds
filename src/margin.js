@@ -6,7 +6,7 @@ export default sow(({
 	(margin == null) ? (
 		{}
 	) :
-	(typeof margin === 'number') ? (
+	(typeof margin === 'number' || typeof margin === 'string') ? (
 		{ margin }
 	) : (
 		Object.assign({}, 

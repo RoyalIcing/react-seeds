@@ -49,11 +49,17 @@ describe('Stylers', () => {
 		})
 
 		expectClean(margin({
-			margin: { top: 10, bottom: 20, left: 30, right: 40 }
+			margin: '5em'
+		}).style).toEqual({
+			margin: '5em'
+		})
+
+		expectClean(margin({
+			margin: { top: 10, bottom: 20, left: '30em', right: 40 }
 		}).style).toEqual({
 			marginTop: 10,
 			marginBottom: 20,
-			marginLeft: 30,
+			marginLeft: '30em',
 			marginRight: 40
 		})
   })
@@ -68,11 +74,17 @@ describe('Stylers', () => {
 		})
 
 		expectClean(padding({
-			padding: { top: 10, bottom: 20, left: 30, right: 40 }
+			padding: '5em'
+		}).style).toEqual({
+			padding: '5em'
+		})
+
+		expectClean(padding({
+			padding: { top: 10, bottom: 20, left: '30em', right: 40 }
 		}).style).toEqual({
 			paddingTop: 10,
 			paddingBottom: 20,
-			paddingLeft: 30,
+			paddingLeft: '30em',
 			paddingRight: 40
 		})
   })
