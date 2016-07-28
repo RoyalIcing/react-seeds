@@ -343,5 +343,11 @@ describe('Stylers', () => {
 			borderStyle: 'solid',
 			borderColor: 'white'
 		})
+
+		expectClean(border({
+			border: 'none'
+		}).style).toEqual({
+			border: 'none'
+		})
   })
 })
