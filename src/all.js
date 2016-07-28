@@ -7,6 +7,7 @@ import position from './position'
 import margin from './margin'
 import padding from './padding'
 import text from './text'
+import font from './font'
 import background from './background'
 import border from './border'
 import transition from './transition'
@@ -19,6 +20,7 @@ export default sow.combine([
 	margin,
 	padding,
 	text,
+	font,
 	background,
 	border,
 	transition

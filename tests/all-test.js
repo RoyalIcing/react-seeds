@@ -38,6 +38,15 @@ describe('All styler', () => {
 				shadow: '1px 1px 2px black',
 				rendering: 'optimizeLegibility'
 			},
+			font: {
+				family: 'sans-serif, serif',
+				size: 10,
+				weight: 600,
+				style: 'italic',
+				stretch: 'condensed',
+				variant: 'small-caps',
+				kerning: 'normal'
+			},
 			background: {
 				color: 'yellow',
 				image: 'url("hello.png")',
@@ -55,16 +64,20 @@ describe('All styler', () => {
 			height: 200,
 			minWidth: 1000,
 			minHeight: 800,
+
 			visibility: 'hidden',
 			opacity: 0.5,
+
 			marginTop: 10,
 			marginBottom: 20,
 			marginLeft: 30,
 			marginRight: 40,
+			
 			paddingTop: 10,
 			paddingBottom: 20,
 			paddingLeft: 30,
 			paddingRight: 40,
+
 			display: 'flex',
 			flexDirection: 'row-reverse',
 			flexWrap: 'wrap',
@@ -72,11 +85,13 @@ describe('All styler', () => {
 			flexBasis: '50%',
 			flexGrow: 2,
 			flexShrink: 3,
+
 			position: 'absolute',
 			top: 10,
 			bottom: 20,
 			left: 30,
 			right: 40,
+
 			color: 'red',
 			textAlign: 'right',
 			textIndent: '1em',
@@ -85,6 +100,15 @@ describe('All styler', () => {
 			textDecoration: 'underline',
 			textShadow: '1px 1px 2px black',
 			textRendering: 'optimizeLegibility',
+
+			fontFamily: 'sans-serif, serif',
+			fontSize: 10,
+			fontWeight: 600,
+			fontStyle: 'italic',
+			fontStretch: 'condensed',
+			fontVariant: 'small-caps',
+			fontKerning: 'normal',
+
 			backgroundColor: 'yellow',
 			backgroundImage: 'url("hello.png")',
 			backgroundPosition: 'left bottom',
@@ -93,6 +117,7 @@ describe('All styler', () => {
 			backgroundClip: 'text',
 			backgroundRepeat: 'repeat-x',
 			backgroundAttachment: 'fixed',
+
 			borderRadius: 20.0,
 			borderWidth: 4,
 			borderStyle: 'solid',

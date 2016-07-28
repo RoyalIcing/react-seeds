@@ -9,6 +9,7 @@ import {
 	margin,
 	padding,
 	text,
+	font,
 	background,
 	border,
 	transition
@@ -251,6 +252,30 @@ describe('Stylers', () => {
 			textDecoration: 'underline',
 			textShadow: '1px 1px 2px black',
 			textRendering: 'optimizeLegibility'
+		})
+  })
+
+	it('font', () => {
+    expectClean(font({}).style).toEqual({})
+
+		expectClean(font({
+			font: {
+				family: 'sans-serif, serif',
+				size: 10,
+				weight: 600,
+				style: 'italic',
+				stretch: 'condensed',
+				variant: 'small-caps',
+				kerning: 'normal'
+			}
+		}).style).toEqual({
+			fontFamily: 'sans-serif, serif',
+			fontSize: 10,
+			fontWeight: 600,
+			fontStyle: 'italic',
+			fontStretch: 'condensed',
+			fontVariant: 'small-caps',
+			fontKerning: 'normal'
 		})
   })
 
