@@ -1,6 +1,6 @@
 {
   "name": "react-seeds",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "React stylers for nicer Flexbox and CSS",
   "main": "lib/index.js",
   "jsnext:main": "es6/index.js",
@@ -14,7 +14,7 @@
     "clean": "nwb clean",
     "test": "nwb test",
     "test:watch": "nwb test --server",
-		"prepublish": "npm run build && npm test"
+    "prepublish": "npm run build && npm test"
   },
   "dependencies": {
     "react": "^15.2.1",
