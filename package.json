@@ -13,7 +13,8 @@
     "build": "nwb build",
     "clean": "nwb clean",
     "test": "nwb test",
-    "test:watch": "nwb test --server"
+    "test:watch": "nwb test --server",
+		"prepublish": "npm run build && npm test"
   },
   "dependencies": {
     "react": "^15.2.1",
