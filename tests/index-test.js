@@ -45,22 +45,28 @@ describe('Stylers', () => {
 		expectClean(margin({
 			margin: 20
 		}).style).toEqual({
-			margin: 20
+			marginTop: 20,
+			marginLeft: 20,
+			marginRight: 20,
+			marginBottom: 20
 		})
 
 		expectClean(margin({
 			margin: '5em'
 		}).style).toEqual({
-			margin: '5em'
+			marginTop: '5em',
+			marginLeft: '5em',
+			marginRight: '5em',
+			marginBottom: '5em'
 		})
 
 		expectClean(margin({
-			margin: { top: 10, bottom: 20, left: '30em', right: 40 }
+			margin: { top: 10, bottom: '20%', left: '30em', right: '40rem' }
 		}).style).toEqual({
 			marginTop: 10,
-			marginBottom: 20,
+			marginBottom: '20%',
 			marginLeft: '30em',
-			marginRight: 40
+			marginRight: '40rem'
 		})
   })
 
@@ -70,22 +76,28 @@ describe('Stylers', () => {
 		expectClean(padding({
 			padding: 20
 		}).style).toEqual({
-			padding: 20
+			paddingTop: 20,
+			paddingLeft: 20,
+			paddingRight: 20,
+			paddingBottom: 20
 		})
 
 		expectClean(padding({
 			padding: '5em'
 		}).style).toEqual({
-			padding: '5em'
+			paddingTop: '5em',
+			paddingLeft: '5em',
+			paddingRight: '5em',
+			paddingBottom: '5em'
 		})
 
 		expectClean(padding({
-			padding: { top: 10, bottom: 20, left: '30em', right: 40 }
+			padding: { top: 10, bottom: '20%', left: '30em', right: '40rem' }
 		}).style).toEqual({
 			paddingTop: 10,
-			paddingBottom: 20,
+			paddingBottom: '20%',
 			paddingLeft: '30em',
-			paddingRight: 40
+			paddingRight: '40rem'
 		})
   })
 

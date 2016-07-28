@@ -7,7 +7,7 @@ export default sow(({
 		{}
 	) :
 	(typeof padding === 'number' || typeof padding === 'string') ? (
-		{ padding }
+		{ paddingTop: padding, paddingLeft: padding, paddingRight: padding, paddingBottom: padding }
 	) : (
 		Object.assign({}, 
 			padding.top != null && { paddingTop: padding.top },

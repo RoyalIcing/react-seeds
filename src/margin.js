@@ -7,7 +7,7 @@ export default sow(({
 		{}
 	) :
 	(typeof margin === 'number' || typeof margin === 'string') ? (
-		{ margin }
+		{ marginTop: margin, marginLeft: margin, marginRight: margin, marginBottom: margin }
 	) : (
 		Object.assign({}, 
 			margin.top != null && { marginTop: margin.top },
