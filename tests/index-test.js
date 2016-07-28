@@ -175,21 +175,35 @@ describe('Stylers', () => {
 			flexDirection: 'row',
 			flexWrap: 'wrap-reverse'
 		})
+
+		expectClean(flex({
+			row: true,
+			alignItems: 'baseline',
+			alignContent: 'space-between',
+			justifyContent: 'center',
+		}).style).toEqual({
+			display: 'flex',
+			flexDirection: 'row',
+			flexWrap: 'nowrap',
+			alignItems: 'baseline',
+			alignContent: 'space-between',
+			justifyContent: 'center'
+		})
   })
 
 	it('flex item', () => {
     expectClean(flex({}).style).toEqual({})
 
 		expectClean(flex({
-			alignItems: 'center',
 			basis: '50%',
 			grow: 2,
-			shrink: 3
+			shrink: 3,
+			alignSelf: 'center'
 		}).style).toEqual({
-			alignItems: 'center',
 			flexBasis: '50%',
 			flexGrow: 2,
-			flexShrink: 3
+			flexShrink: 3,
+			alignSelf: 'center'
 		})
   })
 
