@@ -10,7 +10,7 @@ function pickHandlers(props) {
 			picked[key] = props[key]
 		}
 		return picked
-	}))
+	}, {}))
 }
 
 export default function Seed({ Component = 'div', ...props }) {
