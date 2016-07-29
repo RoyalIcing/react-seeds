@@ -13,9 +13,24 @@ function pickHandlers(props) {
 	}, {})
 }
 
-export default function Seed({ Component = 'div', ...props }) {
-	// `children` gets handled automatically by styler
-	return (
-		<Component { ...pickHandlers(props) } { ...styler(props) } />
-	)
-}
+export default React.createClass({
+	displayName: 'Seed',
+
+	render() {
+		const {
+			Component = 'div', value, checked, selected,
+			...props
+		} = this.props
+
+		// `children` gets handled automatically by styler
+		return (
+			<Component
+				{ ...pickHandlers(props) }
+				{ ...styler(props) }
+				value={ value }
+				checked={ checked }
+				selected={ selected }
+			/>
+		)
+	}
+})
