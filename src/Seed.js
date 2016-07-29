@@ -18,7 +18,9 @@ export default React.createClass({
 
 	render() {
 		const {
-			Component = 'div', value, checked, selected,
+			Component = 'div',
+			className,
+			value, checked, selected,
 			...props
 		} = this.props
 
@@ -27,6 +29,7 @@ export default React.createClass({
 			<Component
 				{ ...pickHandlers(props) }
 				{ ...styler(props) }
+				className={ className }
 				value={ value }
 				checked={ checked }
 				selected={ selected }
