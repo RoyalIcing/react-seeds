@@ -95,9 +95,12 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 - **wrap** : *boolean* = false
 - **reverse** : *boolean* = false
 - **alignItems** : *string*
+- **alignContent** : *string*
+- **justifyContent** : *string*
 - **basis** : *string*
 - **grow** : *number*
 - **shrink** : *number*
+- **alignSelf** : *string*
 
 ### position
 
@@ -115,7 +118,7 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 
 ### margin
 
-- **margin** : *number | object*
+- **margin** : *number | string | object:*
   - **top** : *number?*
   - **bottom** : *number?*
   - **left** : *number?*
@@ -123,7 +126,7 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 
 ### padding
 
-- **padding** : *number | object*
+- **padding** : *number | string | object:*
   - **top** : *number?*
   - **bottom** : *number?*
   - **left** : *number?*
@@ -131,7 +134,7 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 
 ### text
 
-- **text** : *object*
+- **text** : *object:*
   - **color** : *string?*
   - **align** : *string?*
   - **indent** : *string?*
@@ -141,9 +144,20 @@ and use of objects for attributes such as margin, padding, absolute & relative p
   - **shadow** : *string?*
   - **rendering** : *string?*
 
+### font
+
+- **font** : *object:*
+  - **family** : *string?*
+  - **size** : *number? | string?*
+  - **weight** : *number? | string?*
+  - **style** : *string?*
+  - **stretch** : *string?*
+  - **variant** : *string?*
+  - **kerning** : *string?*
+
 ### background
 
-- **background** : *object*
+- **background** : *string | object:*
   - **color** : *string?*
   - **image** : *string?*
   - **position** : *string?*
@@ -156,7 +170,7 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 ### border
 
 - **borderRadius / cornerRadius** : *number*
-- **border** : *object*
+- **border** : *string | object:*
   - **width** : *number?*
   - **style** : *string?*
   - **color** : *color?*
