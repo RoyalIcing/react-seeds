@@ -6,15 +6,16 @@ export default sow(({
 	width,
 	height,
 	minWidth,
-	minHeight
-}) => Object.assign({},
-	{
-		boxSizing,
-		overflow,
-		width,
-		height,
-		minWidth,
-		minHeight
-	}
-))
-
+	minHeight,
+	maxWidth,
+	maxHeight
+}) => ({
+	boxSizing,
+	overflow,
+	width,
+	height,
+	minWidth,
+	minHeight,
+	maxWidth,
+	maxHeight
+}))

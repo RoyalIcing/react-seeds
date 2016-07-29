@@ -26,6 +26,32 @@ describe('Stylers', () => {
 		}).style).toEqual({
 			boxSizing: 'content-box'
 		})
+
+		expectClean(boxSizing({
+			width: 100,
+			height: '50%'
+		}).style).toEqual({
+			boxSizing: 'border-box',
+			width: 100,
+			height: '50%'
+		})
+
+		expectClean(boxSizing({
+			width: 100,
+			height: '50%',
+			minWidth: 1,
+			minHeight: 12,
+			maxWidth: '50rem',
+			maxHeight: '10%'
+		}).style).toEqual({
+			boxSizing: 'border-box',
+			width: 100,
+			height: '50%',
+			minWidth: 1,
+			minHeight: 12,
+			maxWidth: '50rem',
+			maxHeight: '10%'
+		})
   })
 
 	it('visibility', () => {

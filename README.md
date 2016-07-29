@@ -82,6 +82,8 @@ and use of objects for attributes such as margin, padding, absolute & relative p
 - **height** : *number*
 - **minWidth** : *number*
 - **minHeight** : *number*
+- **maxWidth** : *number*
+- **maxHeight** : *number*
 
 ### visibility
 
