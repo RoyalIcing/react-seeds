@@ -1,5 +1,5 @@
 import React from 'react';
-import styler from './all';
+import seeds from './all';
 
 const handlerKeyRegex = /^on[A-Z0-9]/
 
@@ -13,6 +13,8 @@ function pickHandlers(props) {
 	}, {})
 }
 
+const defaultStyler = () => ({})
+
 export default React.createClass({
 	displayName: 'Seed',
 
@@ -20,6 +22,7 @@ export default React.createClass({
 		const {
 			Component = 'div',
 			className,
+			styler = defaultStyler,
 			value, checked, selected,
 			...props
 		} = this.props
@@ -28,6 +31,7 @@ export default React.createClass({
 		return (
 			<Component
 				{ ...pickHandlers(props) }
+				{ ...seeds(props) }
 				{ ...styler(props) }
 				className={ className }
 				value={ value }
