@@ -12,3 +12,5 @@ export { default as transition } from './transition'
 
 export { default as default } from './all'
 export { default as Seed } from './Seed'
+
+export { default as appearanceNone } from './appearanceNone'
